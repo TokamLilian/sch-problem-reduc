@@ -1,0 +1,71 @@
+{
+    "cours0":{
+        "nom": "IFT 1005",
+        "heures": 4
+    },
+
+    "cours1":{
+        "nom": "IFT 1015",
+        "heures": 4
+    },
+
+    "cours2":{
+        "nom": "IFT 1215",
+        "heures": 4
+    },
+
+    "cours3":{
+        "nom": "IFT 2105",
+        "heures": 4
+    },
+
+    "cours4":{
+        "nom": "IFT 2505",
+        "heures": 4
+    },
+
+    "cours5":{
+        "nom": "IFT 3395",
+        "heures": 4
+    },
+
+    "cours6":{
+        "nom": "IFT 1025",
+        "heures": 4
+    },
+
+    "cours7":{
+        "nom": "IFT 2255",
+        "heures": 4
+    },
+
+    "cours8":{
+        "nom": "MAT 1400",
+        "heures": 6
+    },
+
+    "cours9":{
+        "nom": "MAT 1600",
+        "heures": 6
+    },
+
+    "cours10":{
+        "nom": "MAT 1978",
+        "heures": 6
+    },
+
+    "cours11":{
+        "nom": "IFT 3265",
+        "heures": 4
+    },
+
+    "cours12":{
+        "nom": "IFT 3305",
+        "heures": 4
+    },
+
+    "cours13":{
+        "nom": "IFT 4000",
+        "heures": 4
+    }
+}

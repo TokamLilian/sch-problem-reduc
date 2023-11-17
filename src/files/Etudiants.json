@@ -1,0 +1,48 @@
+{
+    "Etudiant0":{
+        "userName":"ert678",
+        "matricule":"234567",
+        "coursInscrits":["IFT 2505",
+                        "MAT 1978",
+                        "IFT 2105",
+                        "IFT 1025"
+        ]
+
+    },
+
+    "Etudiant1":{
+        "userName":"vbs678",
+        "matricule":"34567",
+        "coursInscrits":[
+            "IFT 4000",
+            "IFT 2255",
+            "IFT 3265",
+            "IFT 2035"
+        ]
+
+    },
+
+    "Etudiant2":{
+        "userName":"cvb987",
+        "matricule":"987454",
+        "coursInscrits":[
+             "IFT 2035",
+             "IFT 2105",
+             "IFT 3395",
+             "IFT 3305"
+        ]
+
+    },
+
+    "Etudiant3":{
+        "userName":"hv9746",
+        "matricule":"456789",
+        "coursInscrits":[
+             "MAT 1400",
+             "IFT 2105",
+             "IFT 2505",
+             "MAT 1600"
+        ]
+
+    }
+}
