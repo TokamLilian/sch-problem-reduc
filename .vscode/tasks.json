@@ -9,6 +9,13 @@
         "group": {
           "kind": "build",
           "isDefault": true
+        },
+        "presentation": {
+          "reveal": "always",
+          "panel": "dedicated"
+        },
+        "options": {
+          "cwd": "${workspaceFolder}\\src\\frontend"
         }
       }
     ]
