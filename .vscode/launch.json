@@ -5,12 +5,31 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Redux-main",
-            "type": "python",
+            "type": "node",
             "request": "launch",
-            "program": "${file}",
-            "console": "integratedTerminal",
-            "justMyCode": true
-        }
+            "name": "Launch JS",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\src\\frontend\\main.js"
+        },
+        
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        },
+
+        {
+            "name": "Launch HTML with Server",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}\\src\\frontend\\index.html",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "startServer"
+          }
+               
     ]
 }
