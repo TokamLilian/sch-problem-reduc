@@ -103,12 +103,14 @@ class Session:
         try:
             with open(self.session_file, "w", encoding='utf-8') as json_file:
                 cours_dict = {}
-                
+                id=0
+
                 for cours in self.__Cours:
                     
                     cour = self.__Cours[cours]
                     courX = {}
                     
+                    courX["id"] = id
                     courX["nom"] = cour.get_nom()
                     courX["heures"] = cour.get_hours()
 
@@ -122,7 +124,8 @@ class Session:
                     courX["adjacences"] = adjacences_tab
 
                     cours_dict[f'{cours}'] = courX
-
+                    id+=1
+                    
                 cours_dict["periodes"] = self.__Periodes
 
                 try:
