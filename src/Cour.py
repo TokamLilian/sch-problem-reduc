@@ -22,6 +22,16 @@ class Cour:
             self.adjacences.append(c)
 
 
+    def not_adjacent(self, cours):
+        """
+        Retourne vrai si le cours passé en commentaire n'est pas adjacent au cours courrant
+        :params: ``cours`` de type Cour
+        :returns: Si les deux cours sont adjacents
+        """
+        if cours not in self.adjacences:
+            return True
+
+
     def get_nom(self):
         return self.nom
     
