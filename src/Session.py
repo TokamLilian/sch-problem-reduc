@@ -57,14 +57,36 @@ class Session:
 
     def get_etudiants(self):
         """
-        Retourne un chaque etudiant et ses attributs
+        Retourne un dictionnaire d'étudiants
         """
         return self.__Etudiants
 
 
     def get_cours(self):
+        """
+        Retourne les cours
+        """
         return self.__Cours
     
+
+    def get_periodes(self):
+        """
+        Retourne le nombre de periodes
+        """
+        return self.__Periodes
+
+
+    def get_cours_by_name(self, nom):
+        """
+        Retourne un dictionnaire qui associe le nom d'un cours au cour correspondant
+        """
+        courses = self.get_cours()
+        for cours in courses :
+            if courses[cours].get_nom() == nom:
+                return courses[cours]
+            
+        return None                 #si le cours n'existe pas parmis les cours offerts
+            
 
     def afficher_cours(self):
         """
@@ -100,6 +122,8 @@ class Session:
                     courX["adjacences"] = adjacences_tab
 
                     cours_dict[f'{cours}'] = courX
+
+                cours_dict["periodes"] = self.__Periodes
 
                 try:
                     json.dump(cours_dict, json_file)
