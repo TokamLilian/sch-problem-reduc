@@ -21,12 +21,20 @@ class main:
             self.Year[f"session{x}"] = s
 
 
-    def creer_etudiants(self, obj):
+    def creer_etudiants(self, session, obj):
         """
         Retourne un dictionnaire d'etudiants
         """
-        #taille = len(obj)
-        return {f'{etudiant}':Etudiant(obj[etudiant]["userName"], obj[etudiant]["matricule"], obj[etudiant]["coursInscrits"]) for etudiant in obj }
+        def tab_cours(cours):
+            cours_tab = []
+            for cour in cours:
+                courX = session.get_cours_by_name(cour)
+
+                if courX != None: cours_tab.append(courX)
+            
+            return cours_tab
+
+        return {f'{etudiant}':Etudiant(obj[etudiant]["userName"], obj[etudiant]["matricule"], tab_cours(obj[etudiant]["coursInscrits"])) for etudiant in obj }
     
 
     def creer_cours(self, obj):
@@ -45,11 +53,18 @@ class main:
         
         for current_student in students:
             student = students[current_student]
-
             cours = student.get_cours()
-            for course in cours:
-                print(course.get_nom())
 
+            #ajouter chaque cours dans "cours" parmi les adjacences des cours dans "cours"
+            for course in cours:           
+
+                for course_next in cours:           
+
+                    if course != course_next:
+
+                        if course.not_adjacent(course_next):
+                            course.add_adjacence(course_next)
+                            course_next.add_adjacence(course)
 
 
     def start(self, session):
@@ -67,7 +82,7 @@ class main:
         try:
            with open(self.students_file, "r", encoding='utf-8') as students_file:
                Etudiants = json.load(students_file) 
-               session.set_etudiants(i.creer_etudiants(Etudiants))
+               session.set_etudiants(i.creer_etudiants(session, Etudiants))
         except Exception as e:
 
             print(e)
@@ -83,5 +98,5 @@ if __name__ == "__main__":
     session = Session(nom)
     i.start(session)
     
-    #session.save_to_file()
+    session.save_to_file()
     i.ajouter(session)
