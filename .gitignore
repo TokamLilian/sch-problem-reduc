@@ -161,3 +161,5 @@ cython_debug/
 src/frontend/app/app.jsx
 .gitignore
 src/frontend/app/main_index.ts
+src/package-lock.json
+src/package.json
