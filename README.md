@@ -9,10 +9,8 @@ Below shows a representation of courses adjancences
 -  [Setup](#setup)
 -  [The Scheduling Problem](#the-scheduling-problem)
 -  [Graph Colorings and the Scheduling Problem](#graph-colorings-and-the-scheduling-problem)
--  [Reduction from the Scheduling Problem to Graph Coloring](#reduction-from-the-scheduling-problem-
--to-graph-coloring)
--  [Solution Approach for Reducing the Scheduling Problem to Graph Coloring](#solution-approach-for-redu
-cing-the-scheduling-problem-to-graph-coloring)
+-  [Reduction from the Scheduling Problem to Graph Coloring](#reduction-from-the-scheduling-problem-to-graph-coloring)
+-  [Solution Approach for Reducing the Scheduling Problem to Graph Coloring](#solution-approach-for-reducing-the-scheduling-problem-to-graph-coloring)
 -  [Conclusion](#conclusion)
 
 ## Installation
