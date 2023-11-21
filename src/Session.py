@@ -129,7 +129,7 @@ class Session:
                 cours_dict["periodes"] = self.__Periodes
 
                 try:
-                    json.dump(cours_dict, json_file)
+                    json.dump(cours_dict, json_file, indent=3)
                 except Exception as e:
                     print("Error writing to file")
         except:

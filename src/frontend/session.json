@@ -1,1 +1,132 @@
-{"cours0": {"id": 0, "nom": "IFT 1005", "heures": 4, "adjacences": []}, "cours1": {"id": 1, "nom": "IFT 1015", "heures": 4, "adjacences": []}, "cours2": {"id": 2, "nom": "IFT 1215", "heures": 4, "adjacences": []}, "cours3": {"id": 3, "nom": "IFT 2105", "heures": 4, "adjacences": ["IFT 2505", "MAT 1978", "IFT 1025", "IFT 3395", "IFT 3305", "MAT 1400", "MAT 1600"]}, "cours4": {"id": 4, "nom": "IFT 2505", "heures": 4, "adjacences": ["MAT 1978", "IFT 2105", "IFT 1025", "MAT 1400", "MAT 1600"]}, "cours5": {"id": 5, "nom": "IFT 3395", "heures": 4, "adjacences": ["IFT 2105", "IFT 3305"]}, "cours6": {"id": 6, "nom": "IFT 1025", "heures": 4, "adjacences": ["IFT 2505", "MAT 1978", "IFT 2105"]}, "cours7": {"id": 7, "nom": "IFT 2255", "heures": 4, "adjacences": ["IFT 4000", "IFT 3265"]}, "cours8": {"id": 8, "nom": "MAT 1400", "heures": 6, "adjacences": ["IFT 2105", "IFT 2505", "MAT 1600"]}, "cours9": {"id": 9, "nom": "MAT 1600", "heures": 6, "adjacences": ["MAT 1400", "IFT 2105", "IFT 2505"]}, "cours10": {"id": 10, "nom": "MAT 1978", "heures": 6, "adjacences": ["IFT 2505", "IFT 2105", "IFT 1025"]}, "cours11": {"id": 11, "nom": "IFT 3265", "heures": 4, "adjacences": ["IFT 4000", "IFT 2255"]}, "cours12": {"id": 12, "nom": "IFT 3305", "heures": 4, "adjacences": ["IFT 2105", "IFT 3395"]}, "cours13": {"id": 13, "nom": "IFT 4000", "heures": 4, "adjacences": ["IFT 2255", "IFT 3265"]}, "periodes": 0}
+{
+   "cours0": {
+      "id": 0,
+      "nom": "IFT 1005",
+      "heures": 4,
+      "adjacences": []
+   },
+   "cours1": {
+      "id": 1,
+      "nom": "IFT 1015",
+      "heures": 4,
+      "adjacences": []
+   },
+   "cours2": {
+      "id": 2,
+      "nom": "IFT 1215",
+      "heures": 4,
+      "adjacences": []
+   },
+   "cours3": {
+      "id": 3,
+      "nom": "IFT 2105",
+      "heures": 4,
+      "adjacences": [
+         "IFT 2505",
+         "MAT 1978",
+         "IFT 1025",
+         "IFT 3395",
+         "IFT 3305",
+         "MAT 1400",
+         "MAT 1600"
+      ]
+   },
+   "cours4": {
+      "id": 4,
+      "nom": "IFT 2505",
+      "heures": 4,
+      "adjacences": [
+         "MAT 1978",
+         "IFT 2105",
+         "IFT 1025",
+         "MAT 1400",
+         "MAT 1600"
+      ]
+   },
+   "cours5": {
+      "id": 5,
+      "nom": "IFT 3395",
+      "heures": 4,
+      "adjacences": [
+         "IFT 2105",
+         "IFT 3305"
+      ]
+   },
+   "cours6": {
+      "id": 6,
+      "nom": "IFT 1025",
+      "heures": 4,
+      "adjacences": [
+         "IFT 2505",
+         "MAT 1978",
+         "IFT 2105"
+      ]
+   },
+   "cours7": {
+      "id": 7,
+      "nom": "IFT 2255",
+      "heures": 4,
+      "adjacences": [
+         "IFT 4000",
+         "IFT 3265"
+      ]
+   },
+   "cours8": {
+      "id": 8,
+      "nom": "MAT 1400",
+      "heures": 6,
+      "adjacences": [
+         "IFT 2105",
+         "IFT 2505",
+         "MAT 1600"
+      ]
+   },
+   "cours9": {
+      "id": 9,
+      "nom": "MAT 1600",
+      "heures": 6,
+      "adjacences": [
+         "MAT 1400",
+         "IFT 2105",
+         "IFT 2505"
+      ]
+   },
+   "cours10": {
+      "id": 10,
+      "nom": "MAT 1978",
+      "heures": 6,
+      "adjacences": [
+         "IFT 2505",
+         "IFT 2105",
+         "IFT 1025"
+      ]
+   },
+   "cours11": {
+      "id": 11,
+      "nom": "IFT 3265",
+      "heures": 4,
+      "adjacences": [
+         "IFT 4000",
+         "IFT 2255"
+      ]
+   },
+   "cours12": {
+      "id": 12,
+      "nom": "IFT 3305",
+      "heures": 4,
+      "adjacences": [
+         "IFT 2105",
+         "IFT 3395"
+      ]
+   },
+   "cours13": {
+      "id": 13,
+      "nom": "IFT 4000",
+      "heures": 4,
+      "adjacences": [
+         "IFT 2255",
+         "IFT 3265"
+      ]
+   },
+   "periodes": 0
+}
