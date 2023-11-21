@@ -1,4 +1,5 @@
 import os
+import sys
 import json
 import threading
 
@@ -36,40 +37,34 @@ def get_semester():
         print("Couldn't load data from session file.", str(e))
 
 
-# class MyRequestHandler(http.server.SimpleHTTPRequestHandler):
-#     def do_GET(self):
-#         if self.path == '/':
-#             self.path = '/frontend/index.html'
-#         return http.server.SimpleHTTPRequestHandler.do_GET(self)
-
-# Handler = MyRequestHandler
-# server = socketserver.TCPServer(('127.0.0.1', 8080), Handler)
-
-# server.serve_forever()
-
 @app.route("/")
-def lauch_html():
-    # PORT = 8080
-    # HOSTNAME = 'localhost'
-    # handler = http.server.SimpleHTTPRequestHandler
-    # with socketserver.TCPServer((HOSTNAME, PORT), handler) as httpd:
-    #     print(f"serving at port {PORT}")
-    #     httpd.serve_forever()
-
+def serve_index():
     return render_template('index.html')
+
+# def run_tkinter_app():
+#     try:
+#         subprocess.run(['py', 'tkinter_app.py'], check=True)
+#         return 'Tkinter app opened successfully.'
+#     except Exception as e:
+#         print('Error running program', str(e))
+
 
 def open_browser():
     webbrowser.open_new_tab("http://127.0.0.1:5001/")
 
 if __name__ == '__main__':
     # Start Flask app in a separate thread
-    app_thread = threading.Thread(target=app.run, kwargs={'debug': True})
-    app_thread.start()
+    # app_thread = threading.Thread(target=app.run, kwargs={'debug': True})
+    # app_thread.start()
+
+    # tkinter_timer = threading.Timer(1, run_tkinter_app)
+    # tkinter_timer.start()
 
     webbrowser_timer = threading.Timer(1, open_browser)
     webbrowser_timer.start()
 
-    app.run(debug=True, port=5001)
+    #open_browser()
+    app.run(debug=False, port=5001)
 
 ##---Execute get_semester() ---##
 ## curl http://127.0.0.1:5001/api/_get_semester ##
