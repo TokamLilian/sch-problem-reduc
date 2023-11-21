@@ -5,7 +5,7 @@
       "heures": 4,
       "adjacences": [
          "MAT 1600",
-         "IFT 1015",
+         "IFT 1215",
          "IFT 2105"
       ]
    },
@@ -13,17 +13,17 @@
       "id": 1,
       "nom": "IFT 1015",
       "heures": 4,
-      "adjacences": [
-         "MAT 1600",
-         "IFT 1005",
-         "IFT 2105"
-      ]
+      "adjacences": []
    },
    "cours2": {
       "id": 2,
       "nom": "IFT 1215",
       "heures": 4,
-      "adjacences": []
+      "adjacences": [
+         "MAT 1600",
+         "IFT 1005",
+         "IFT 2105"
+      ]
    },
    "cours3": {
       "id": 3,
@@ -38,7 +38,7 @@
          "MAT 1400",
          "MAT 1600",
          "IFT 1005",
-         "IFT 1015"
+         "IFT 1215"
       ]
    },
    "cours4": {
@@ -100,7 +100,7 @@
          "IFT 2105",
          "IFT 2505",
          "IFT 1005",
-         "IFT 1015"
+         "IFT 1215"
       ]
    },
    "cours10": {
