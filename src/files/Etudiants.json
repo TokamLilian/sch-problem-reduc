@@ -44,5 +44,17 @@
              "MAT 1600"
         ]
 
+    },
+
+    "Etudiant4":{
+        "userName":"hr9940",
+        "matricule":"579191",
+        "coursInscrits":[
+             "MAT 1600",
+             "IFT 1005",
+             "IFT 1015",
+             "IFT 2105"
+        ]
+
     }
 }
