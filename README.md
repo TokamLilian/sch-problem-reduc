@@ -31,7 +31,7 @@ Start the server in the correct directory `sch-problem-reduc/src`
 py app.py
 ```
 
-Lauch the client side by starting `index.html` on a different server port
+The client side is automatically launched `index.html` in a new browser tab
 
 ---
 
