@@ -1,4 +1,4 @@
-//import semesterData from './session.json' assert {type: 'json'};
+import semesterData from './session.json' assert {type: 'json'};
 
 const url = 'http://127.0.0.1:5001/api/run_program';  // URL according to your Flask app
 fetch(url)
@@ -36,7 +36,8 @@ function calculateCircularPath(radius, numPoints) {
     return coordinates;
   }
 
-const semesterData = await fetchData()
+//const semesterData = await fetchData()
+console.log(semesterData)
 const pathCoordinates = calculateCircularPath(radius, Object.keys(semesterData).length-1);
 
 
