@@ -13,7 +13,6 @@
             ],
             "program": "${workspaceFolder}\\src\\frontend\\main.js"
         },
-        
         {
             "name": "Launch Chrome",
             "request": "launch",
@@ -21,7 +20,6 @@
             "url": "http://localhost:8080",
             "webRoot": "${workspaceFolder}"
         },
-
         {
             "name": "Launch HTML with Server",
             "type": "chrome",
@@ -29,7 +27,14 @@
             "file": "${workspaceFolder}\\src\\frontend\\index.html",
             "webRoot": "${workspaceFolder}",
             "preLaunchTask": "startServer"
-          }
-               
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
     ]
 }
