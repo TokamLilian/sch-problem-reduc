@@ -59,7 +59,6 @@ def lauch_html():
     return render_template('index.html')
 
 def open_browser():
-    #webbrowser.open_new_tab("http://localhost:5000")
     webbrowser.open_new_tab("http://127.0.0.1:5001/")
 
 if __name__ == '__main__':
