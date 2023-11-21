@@ -1,6 +1,21 @@
-import data from './session.json' assert {type: 'json'};
-//const data = {"cours0": {"nom": "IFT 1005", "heures": 4, "adjacences": []}, "cours1": {"nom": "IFT 1015", "heures": 4, "adjacences": []}, "cours2": {"nom": "IFT 1215", "heures": 4, "adjacences": []}, "cours3": {"nom": "IFT 2105", "heures": 4, "adjacences": ["IFT 2505", "MAT 1978", "IFT 1025", "IFT 3395", "IFT 3305", "MAT 1400", "MAT 1600"]}, "cours4": {"nom": "IFT 2505", "heures": 4, "adjacences": ["MAT 1978", "IFT 2105", "IFT 1025", "MAT 1400", "MAT 1600"]}, "cours5": {"nom": "IFT 3395", "heures": 4, "adjacences": ["IFT 2105", "IFT 3305"]}, "cours6": {"nom": "IFT 1025", "heures": 4, "adjacences": ["IFT 2505", "MAT 1978", "IFT 2105"]}, "cours7": {"nom": "IFT 2255", "heures": 4, "adjacences": ["IFT 4000", "IFT 3265"]}, "cours8": {"nom": "MAT 1400", "heures": 6, "adjacences": ["IFT 2105", "IFT 2505", "MAT 1600"]}, "cours9": {"nom": "MAT 1600", "heures": 6, "adjacences": ["MAT 1400", "IFT 2105", "IFT 2505"]}, "cours10": {"nom": "MAT 1978", "heures": 6, "adjacences": ["IFT 2505", "IFT 2105", "IFT 1025"]}, "cours11": {"nom": "IFT 3265", "heures": 4, "adjacences": ["IFT 4000", "IFT 2255"]}, "cours12": {"nom": "IFT 3305", "heures": 4, "adjacences": ["IFT 2105", "IFT 3395"]}, "cours13": {"nom": "IFT 4000", "heures": 4, "adjacences": ["IFT 2255", "IFT 3265"]}, "periodes": 0}
-//console.log(data)
+//import semesterData from './session.json' assert {type: 'json'};
+
+const url = 'http://127.0.0.1:5001/api/run_program';  // URL according to your Flask app
+fetch(url)
+
+async function fetchData(){
+
+    try{
+        const response = await fetch('http://127.0.0.1:5001/api/get_semester');
+        const data = await response.json();
+        
+        return data; // Return the fetched data
+    
+    }catch(error){
+        console.error('Error:', error);
+    };
+
+}
 
 let radius = 200;
 const courseTree = document.getElementById('courseTree');
@@ -13,21 +28,22 @@ function calculateCircularPath(radius, numPoints) {
 
     for (let i = 0; i < numPoints; i++) {
       const angle = (i / numPoints) * 2 * Math.PI;
-      const x = radius * Math.cos(angle);
-      const y = radius * Math.sin(angle);
+      const x = radius * Math.cos(angle)+50;        //50 for margin size
+      const y = radius * Math.sin(angle)+50;
       coordinates.push({ x, y });
     }
 
     return coordinates;
   }
 
-const pathCoordinates = calculateCircularPath(radius, Object.keys(data).length-1);
+const semesterData = await fetchData()
+const pathCoordinates = calculateCircularPath(radius, Object.keys(semesterData).length-1);
 
 
 function getId(courseName){
     let id=-1;
-    for (const c in data){
-        const course = data[c];
+    for (const c in semesterData){
+        const course = semesterData[c];
         if (course["nom"] == courseName){
             return course["id"];
         }
@@ -69,9 +85,9 @@ function drawArc(x1, y1, x2, y2) {
 
 //create circles with text objects to be stored in an array
 let i = 0;
-for (const courseId in data) {
+for (const courseId in semesterData) {
     if (courseId.startsWith("cours")) {
-        const course = data[courseId];
+        const course = semesterData[courseId];
         let x = pathCoordinates[i].x; let y = pathCoordinates[i].y;
         drawCourseNode(course, x+radius, y+radius);
 
@@ -88,9 +104,9 @@ for (const i in circles){
 
  // Draw arcs for dependencies
  let j = 0;
- for (const courseId in data) {
+ for (const courseId in semesterData) {
     if (courseId.startsWith("cours")) {
-        const course = data[courseId];
+        const course = semesterData[courseId];
         course.adjacences.forEach(dependency => {
             const id = getId(dependency);
             drawArc(circles[course["id"]][0].getAttribute('cx'), circles[course["id"]][0].getAttribute('cy'), circles[id][0].getAttribute('cx'), circles[id][0].getAttribute('cy'));
