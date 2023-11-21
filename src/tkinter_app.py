@@ -1,20 +1,25 @@
 import tkinter as tk
-from tkhtmlview import HTMLLabel
+from urllib import request
+from tkinterweb import TkinterWeb
 
-class FlaskAppViewer(tk.Tk):
-    def __init__(self, *args, **kwargs):
-        tk.Tk.__init__(self, *args, **kwargs)
+def open_tkinter_app():
+    root = TkinterWeb()
+    
+    #root = tk.Tk()
+    # Fetch HTML content from the Flask app
+    # url = 'http://127.0.0.1:5001/'
+    # response = request.urlopen(url)
+    # html_content = response.read().decode('utf-8')
+    
+    # Display HTML content in a Tkinter label
+    #label = tk.Label(root, text=html_content, justify=tk.LEFT)
+    # label.pack()
 
-        self.title("Scheduling Reduction")
-        self.geometry("1000x800")
+    root.geometry("1000x800")
 
-        # Create an HTMLLabel to display the Flask app
-        html_label = HTMLLabel(self)
-        html_label.pack(fill=tk.BOTH, expand=True)
-
-        # Load the Flask app content
-        html_label.set_html('<iframe src="http://127.0.0.1:5001/" width="100%" height="100%"></iframe>')
+    # Load the Flask app URL
+    root.load_url("http://127.0.0.1:5001/")
+    root.mainloop()
 
 if __name__ == "__main__":
-    app_viewer = FlaskAppViewer()
-    app_viewer.mainloop()
+    open_tkinter_app()
