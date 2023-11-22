@@ -37,7 +37,7 @@ function calculateCircularPath(radius, numPoints) {
   }
 
 //const semesterData = await fetchData()
-console.log(semesterData)
+//console.log(semesterData)
 const pathCoordinates = calculateCircularPath(radius, Object.keys(semesterData).length-1);
 
 
@@ -67,8 +67,7 @@ function drawCourseNode(course, x, y) {
     text.textContent = course.nom;
 
     circles.push([circle, text]);
-    //circlesContainer.appendChild(circle);
-    //circlesContainer.appendChild(text);
+
 }
 
 // Function to draw an arc between two courses

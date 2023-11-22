@@ -1,10 +1,7 @@
 import os
-import sys
 import json
 import threading
 
-import http.server
-import socketserver
 import webbrowser
 
 from flask import Flask, jsonify, render_template
@@ -36,7 +33,6 @@ def get_semester():
     except Exception as e:
         print("Couldn't load data from session file.", str(e))
 
-
 @app.route("/")
 def serve_index():
     return render_template('index.html')
@@ -57,18 +53,17 @@ if __name__ == '__main__':
     # app_thread = threading.Thread(target=app.run, kwargs={'debug': True})
     # app_thread.start()
 
-    tkinter_timer = threading.Timer(1, run_tkinter_app)
-    tkinter_timer.start()
+    # tkinter_timer = threading.Timer(1, run_tkinter_app)
+    # tkinter_timer.start()
 
     # webbrowser_timer = threading.Timer(1, open_browser)
     # webbrowser_timer.start()
 
-    #open_browser()
     app.run(debug=False, port=5001)
 
 ##---Execute get_semester() ---##
-## curl http://127.0.0.1:5001/api/get_semester ##
+## curl http://127.0.0.1:5001/api/_get_semester ##
 
 
-##---Execute run_program() ---##
+##---Execute run_program() from seperate terminal ---##
 ## curl http://127.0.0.1:5001/api/run_program ##
