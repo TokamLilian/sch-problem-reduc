@@ -19,7 +19,7 @@ class Session:
         self.__Etudiants = {"userName": None, "courses": None }                     #Le dictionnaire de chaque etudiant avec les cours qu'il a
         self.__Cours = {"name": None, "hours": None, "adjacences": None}            #Le dictionnaire des cours ayant le nombre d'heures et ses adjacences
         self.__Periodes = 0                                                         #Le nombres de periodes d'1h disponible en une journée
-        self.current_dir = os.path.join(os.path.dirname(__file__), 'frontend')
+        self.current_dir = os.path.join(os.path.dirname(__file__), 'static')
         self.session_file = os.path.join(self.current_dir, 'session.json')
 
 

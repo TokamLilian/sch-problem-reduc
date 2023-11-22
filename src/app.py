@@ -11,7 +11,7 @@ import subprocess
 current_dir = os.path.join(os.path.dirname(__file__), 'frontend')
 session_file = os.path.join(current_dir, 'session.json')
 
-app = Flask(__name__, template_folder='frontend')
+app = Flask(__name__, template_folder='static')
 
 @app.route('/api/run_program', methods=['GET'])
 def run_program():
