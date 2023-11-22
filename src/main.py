@@ -100,7 +100,7 @@ if __name__ == "__main__":
     session = Session(nom)
     session.set_periodes(periodes)
     i.start(session)
-    coloriage_minimal(session)
 
     session.save_to_file()
+    coloriage_minimal(session)
     i.ajouter(session)
