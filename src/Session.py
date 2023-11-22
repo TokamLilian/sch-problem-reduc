@@ -78,7 +78,7 @@ class Session:
 
     def get_cours_by_name(self, nom):
         """
-        Retourne un dictionnaire qui associe le nom d'un cours au cour correspondant
+        Retourne l'object du cours associé au cour passé en paramètre
         """
         courses = self.get_cours()
         for cours in courses :
@@ -122,6 +122,7 @@ class Session:
                             adjacences_tab.append(cour_adjacent.get_nom())
 
                     courX["adjacences"] = adjacences_tab
+                    courX["couleur"] = 0
 
                     cours_dict[f'{cours}'] = courX
                     id+=1
