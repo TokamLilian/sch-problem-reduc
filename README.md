@@ -40,7 +40,8 @@ The client side is automatically launched `index.html` in a new browser tab
 ---
 
 ## Graph colorings and the scheduling problem
-
+Below shows a coloring of the graph of courses
+![alt text](https://github.com/TokamLilian/sch-problem-reduc/blob/101eb34a6b66289c557c25e162147e6a92e5344c/miscellaneous/Colored_graph_001.png)
 
 ---
 
