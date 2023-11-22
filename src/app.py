@@ -41,33 +41,32 @@ def get_semester():
 def serve_index():
     return render_template('index.html')
 
-# def run_tkinter_app():
-#     try:
-#         subprocess.run(['py', 'tkinter_app.py'], check=True)
-#         return 'Tkinter app opened successfully.'
-#     except Exception as e:
-#         print('Error running program', str(e))
+def run_tkinter_app():
+    try:
+        subprocess.run(['py', 'tkinter_app.py'], check=True)
+        return 'Tkinter app opened successfully.'
+    except Exception as e:
+        print('Error running program', str(e))
 
 
-def open_browser():
-    webbrowser.open_new_tab("http://127.0.0.1:5001/")
+# def open_browser():
+#     webbrowser.open_new_tab("http://127.0.0.1:5001/")
 
 if __name__ == '__main__':
     # Start Flask app in a separate thread
     # app_thread = threading.Thread(target=app.run, kwargs={'debug': True})
     # app_thread.start()
 
-    # tkinter_timer = threading.Timer(1, run_tkinter_app)
-    # tkinter_timer.start()
+    tkinter_timer = threading.Timer(1, run_tkinter_app)
+    tkinter_timer.start()
 
-    webbrowser_timer = threading.Timer(1, open_browser)
-    webbrowser_timer.start()
+    # webbrowser_timer = threading.Timer(1, open_browser)
+    # webbrowser_timer.start()
 
-    #open_browser()
     app.run(debug=False, port=5001)
 
 ##---Execute get_semester() ---##
-## curl http://127.0.0.1:5001/api/_get_semester ##
+## curl http://127.0.0.1:5001/api/get_semester ##
 
 
 ##---Execute run_program() ---##
