@@ -1,48 +1,25 @@
-import sys
-from PyQt5.QtCore import QUrl
-from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
+import tkinter as tk
+from urllib import request
+from tkinterweb import TkinterWeb
 
-class WebPage(QWebEnginePage):
-    def __init__(self, parent=None):
-        super(WebPage, self).__init__(parent)
+def open_tkinter_app():
+    root = TkinterWeb()
+    
+    #root = tk.Tk()
+    # Fetch HTML content from the Flask app
+    # url = 'http://127.0.0.1:5001/'
+    # response = request.urlopen(url)
+    # html_content = response.read().decode('utf-8')
+    
+    # Display HTML content in a Tkinter label
+    #label = tk.Label(root, text=html_content, justify=tk.LEFT)
+    # label.pack()
 
-    def on_load_finished(self, ok):
-        print("Load finished:", ok)
-        if ok:
-            
-            viewer.show()
-            #print(self.parent())
+    root.geometry("1000x800")
 
-    def javaScriptConsoleMessage(self, level, message, lineNumber, sourceID):
-        print(f"Console message ({level}): {message} (line {lineNumber})")
-
-
-class HtmlViewer(QMainWindow):
-    def __init__(self, flask_url):
-        super().__init__()
-
-        self.webview = QWebEngineView()
-        self.webpage = WebPage(self.webview)
-        self.webview.setPage(self.webpage)
-
-        # Load HTML content from Flask app URL
-        self.webview.load(QUrl(flask_url))
-
-        # Connect signals for debugging
-        self.webpage.loadFinished.connect(self.webpage.on_load_finished)
-
-        self.setCentralWidget(self.webview)
-        self.setGeometry(100, 100, 800, 600)
-        self.setWindowTitle("HTML Viewer")
+    # Load the Flask app URL
+    root.load_url("http://127.0.0.1:5001/")
+    root.mainloop()
 
 if __name__ == "__main__":
-    app = QApplication(sys.argv)
-
-    # URL of your Flask app serving HTML content
-    flask_url = "http://127.0.0.1:5001/"
-
-    viewer = HtmlViewer(flask_url)
-    viewer.show()
-
-    sys.exit(app.exec_())
+    open_tkinter_app()
