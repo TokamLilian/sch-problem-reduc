@@ -1,5 +1,5 @@
 import json
-
+file_path = "static\\session.json"
 def coloriage_minimal(session):
     """
     Appliquer un coloriage simple aux cours de la session
@@ -37,7 +37,7 @@ def coloriage_minimal(session):
             cours_session = json.load(json_file)
             appendColors()
 
-        with open(session.session_file, "w", encoding='utf-8') as json_file: 
+        with open(file_path, "w", encoding='utf-8') as json_file: #save to static directory
             try:
                 json.dump(cours_session, json_file, indent=3)
             except Exception as e:
