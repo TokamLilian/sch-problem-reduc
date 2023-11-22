@@ -1,4 +1,5 @@
 import semesterData from './session.json' assert {type: 'json'};
+import colorData from './color_picker.json' assert {type: 'json'};
 
 const url = 'http://127.0.0.1:5001/api/run_program';  // URL according to your Flask app
 fetch(url)
@@ -58,7 +59,8 @@ function drawCourseNode(course, x, y) {
     circle.setAttribute('cx', x);
     circle.setAttribute('cy', y);
     circle.setAttribute('r', 20);
-    circle.setAttribute('fill', 'lightblue');
+    const colorId = course["couleur"]
+    circle.setAttribute('fill', colorData[colorId]);
 
     const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     text.setAttribute('x', x);
