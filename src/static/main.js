@@ -1,25 +1,40 @@
-import semesterData from './session.json' assert {type: 'json'};
+//import semesterData from './session.json' assert {type: 'json'};
 
-const url = 'http://127.0.0.1:5001/api/run_program';  // URL according to your Flask app
-fetch(url)
+// const url = 'http://127.0.0.1:5001/api/run_program';  // URL according to your Flask app
+// fetch(url)
+fetch('http://127.0.0.1:5001/api/run_program')
 
+let semesterData = 1;
 async function fetchData(){
-
-    try{
-        const response = await fetch('http://127.0.0.1:5001/api/get_semester');
-        const data = await response.json();
+    // return new Promise((resolve, reject) => {
+        fetch('http://127.0.0.1:5001/api/get_semester')
+            .then(response => {
+                if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();  // returning the json data
+            })
+            .then(data => {
+                semesterData = JSON.stringify(data, null, 2);
+                //console.log(semesterData);
+                //return semesterData;
+                next(semesterData);
+            })
+            .catch(error => console.error('Error:', error));
+        // try{
+        //     const response = await fetch('http://127.0.0.1:5001/api/get_semester');
+        //     const data = await response.json();
+            
+        //     return data; // Return the fetched data
         
-        return data; // Return the fetched data
-    
-    }catch(error){
-        console.error('Error:', error);
-    };
-
+        // }catch(error){
+        //     console.error('Error:', error);
+        // };
+    // });
 }
 
 let radius = 200;
 const courseTree = document.getElementById('courseTree');
-var circles = [];
 const circlesContainer = document.getElementById('circles-container');
 const linesContainer = document.getElementById('lines-container');
 
@@ -36,9 +51,23 @@ function calculateCircularPath(radius, numPoints) {
     return coordinates;
   }
 
-//const semesterData = await fetchData()
-console.log(semesterData)
-const pathCoordinates = calculateCircularPath(radius, Object.keys(semesterData).length-1);
+async function get_semesterData() {
+    try {
+        const semesterData = await fetchData();
+        //console.log(semesterData);
+        //return semesterData;
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+get_semesterData();
+//console.log(semesterData);
+function next(semesterData){
+    const pathCoordinates = calculateCircularPath(radius, Object.keys(semesterData).length-1);
+    follow(pathCoordinates, semesterData);
+    // alert("next:" + semesterData);
+    // alert("next:" + pathCoordinates);
+}
 
 
 function getId(courseName){
@@ -53,7 +82,7 @@ function getId(courseName){
 }
 
 // Function to draw a course node
-function drawCourseNode(course, x, y) {
+function drawCourseNode(course, x, y, circles) {
     const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     circle.setAttribute('cx', x);
     circle.setAttribute('cy', y);
@@ -66,7 +95,9 @@ function drawCourseNode(course, x, y) {
     text.setAttribute('text-anchor', 'middle');
     text.textContent = course.nom;
 
+    alert("drawC"+circles);
     circles.push([circle, text]);
+    return circles;
     //circlesContainer.appendChild(circle);
     //circlesContainer.appendChild(text);
 }
@@ -84,18 +115,27 @@ function drawArc(x1, y1, x2, y2) {
     linesContainer.appendChild(line);
 }
 
-//create circles with text objects to be stored in an array
-let i = 0;
-for (const courseId in semesterData) {
-    if (courseId.startsWith("cours")) {
-        const course = semesterData[courseId];
-        let x = pathCoordinates[i].x; let y = pathCoordinates[i].y;
-        drawCourseNode(course, x+radius, y+radius);
 
-        i += 1;
+function follow(pathCoordinates, semesterData){
+    //create circles with text objects to be stored in an array
+    var circles = [];
+    let i = 0;
+    for (const courseId in semesterData) {
+        if (courseId.startsWith("cours")) {
+            alert("follow:" + semesterData);
+            const course = semesterData[courseId];
+            let x = pathCoordinates[i].x; let y = pathCoordinates[i].y;
+            circles = drawCourseNode(course, x+radius, y+radius, circles);
+
+            i += 1;
+        }
     }
+    // alert("follow:" + pathCoordinates);
+    alert("follow:" + circles);
 }
 
+alert("out:" + semesterData);
+alert("out:" + circles);
 // Draw the courses and arcs
 for (const i in circles){
     const element = circles[i];
