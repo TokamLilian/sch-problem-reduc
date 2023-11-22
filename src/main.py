@@ -4,6 +4,7 @@ import json
 from Session import *
 from Etudiant import *
 from Cour import *
+from coloriage import *
 
 class main:
     
@@ -94,9 +95,12 @@ if __name__ == "__main__":
     i = main()
 
     nom = "Automne 2023"                                             ##le nom de la session doit etre au debut du fichie lu ou le nom du fichier
+    periodes = 11                                                    ##le nombre de periodes dans une journee
 
     session = Session(nom)
+    session.set_periodes(periodes)
     i.start(session)
-    
+    coloriage_minimal(session)
+
     session.save_to_file()
     i.ajouter(session)
