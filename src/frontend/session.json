@@ -26,7 +26,7 @@
          "IFT 1005",
          "IFT 2105"
       ],
-      "couleur": 0
+      "couleur": 1
    },
    "cours3": {
       "id": 3,
@@ -43,7 +43,7 @@
          "IFT 1005",
          "IFT 1215"
       ],
-      "couleur": 0
+      "couleur": 3
    },
    "cours4": {
       "id": 4,
@@ -77,7 +77,7 @@
          "MAT 1978",
          "IFT 2105"
       ],
-      "couleur": 0
+      "couleur": 1
    },
    "cours7": {
       "id": 7,
@@ -98,7 +98,7 @@
          "IFT 2505",
          "MAT 1600"
       ],
-      "couleur": 0
+      "couleur": 1
    },
    "cours9": {
       "id": 9,
@@ -111,7 +111,7 @@
          "IFT 1005",
          "IFT 1215"
       ],
-      "couleur": 0
+      "couleur": 3
    },
    "cours10": {
       "id": 10,
@@ -122,7 +122,7 @@
          "IFT 2105",
          "IFT 1025"
       ],
-      "couleur": 0
+      "couleur": 2
    },
    "cours11": {
       "id": 11,
@@ -132,7 +132,7 @@
          "IFT 4000",
          "IFT 2255"
       ],
-      "couleur": 0
+      "couleur": 1
    },
    "cours12": {
       "id": 12,
@@ -142,7 +142,7 @@
          "IFT 2105",
          "IFT 3395"
       ],
-      "couleur": 0
+      "couleur": 1
    },
    "cours13": {
       "id": 13,
@@ -152,7 +152,7 @@
          "IFT 2255",
          "IFT 3265"
       ],
-      "couleur": 0
+      "couleur": 2
    },
    "periodes": 11
 }
