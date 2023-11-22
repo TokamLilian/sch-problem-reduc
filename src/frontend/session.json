@@ -7,13 +7,15 @@
          "MAT 1600",
          "IFT 1215",
          "IFT 2105"
-      ]
+      ],
+      "couleur": 0
    },
    "cours1": {
       "id": 1,
       "nom": "IFT 1015",
       "heures": 4,
-      "adjacences": []
+      "adjacences": [],
+      "couleur": 0
    },
    "cours2": {
       "id": 2,
@@ -23,7 +25,8 @@
          "MAT 1600",
          "IFT 1005",
          "IFT 2105"
-      ]
+      ],
+      "couleur": 0
    },
    "cours3": {
       "id": 3,
@@ -39,7 +42,8 @@
          "MAT 1600",
          "IFT 1005",
          "IFT 1215"
-      ]
+      ],
+      "couleur": 0
    },
    "cours4": {
       "id": 4,
@@ -51,7 +55,8 @@
          "IFT 1025",
          "MAT 1400",
          "MAT 1600"
-      ]
+      ],
+      "couleur": 0
    },
    "cours5": {
       "id": 5,
@@ -60,7 +65,8 @@
       "adjacences": [
          "IFT 2105",
          "IFT 3305"
-      ]
+      ],
+      "couleur": 0
    },
    "cours6": {
       "id": 6,
@@ -70,7 +76,8 @@
          "IFT 2505",
          "MAT 1978",
          "IFT 2105"
-      ]
+      ],
+      "couleur": 0
    },
    "cours7": {
       "id": 7,
@@ -79,7 +86,8 @@
       "adjacences": [
          "IFT 4000",
          "IFT 3265"
-      ]
+      ],
+      "couleur": 0
    },
    "cours8": {
       "id": 8,
@@ -89,7 +97,8 @@
          "IFT 2105",
          "IFT 2505",
          "MAT 1600"
-      ]
+      ],
+      "couleur": 0
    },
    "cours9": {
       "id": 9,
@@ -101,7 +110,8 @@
          "IFT 2505",
          "IFT 1005",
          "IFT 1215"
-      ]
+      ],
+      "couleur": 0
    },
    "cours10": {
       "id": 10,
@@ -111,7 +121,8 @@
          "IFT 2505",
          "IFT 2105",
          "IFT 1025"
-      ]
+      ],
+      "couleur": 0
    },
    "cours11": {
       "id": 11,
@@ -120,7 +131,8 @@
       "adjacences": [
          "IFT 4000",
          "IFT 2255"
-      ]
+      ],
+      "couleur": 0
    },
    "cours12": {
       "id": 12,
@@ -129,7 +141,8 @@
       "adjacences": [
          "IFT 2105",
          "IFT 3395"
-      ]
+      ],
+      "couleur": 0
    },
    "cours13": {
       "id": 13,
@@ -138,7 +151,8 @@
       "adjacences": [
          "IFT 2255",
          "IFT 3265"
-      ]
+      ],
+      "couleur": 0
    },
-   "periodes": 0
+   "periodes": 11
 }
