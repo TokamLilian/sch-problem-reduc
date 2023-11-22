@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="icon" href="images/image01.jpeg" type="image/x-icon"> -->
+        <link rel="icon" href="{{ url_for('static', filename='images/image01.jpeg') }}" type="image/x-icon">
+        <title>Graph des cours</title>
+
+        <style>
+            /* svg {
+                width: 100%;
+                height: auto;
+            } */
+
+            svg {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh; /* Set the height to the full viewport height */
+                margin: 0; /* Remove default margin */
+            }
+        </style>
+    </head>
+
+    <body>
+        <svg id="courseTree" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+            <!-- Nodes and arcs go here -->
+            
+            <!-- Container for the circles -->
+            <g id="circles-container"></g>
+            <!-- Container for the lines -->
+            <g id="lines-container"></g>
+        </svg>
+
+        <!-- <script type="module" src="main.js"></script> -->
+        <script type="module" src="{{ url_for('static', filename='main.js') }}"></script>
+    </body>
+</html>
