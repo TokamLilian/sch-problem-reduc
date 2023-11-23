@@ -12,7 +12,6 @@ class WebPage(QWebEnginePage):
         if ok:
             
             viewer.show()
-            #print(self.parent())
 
     def javaScriptConsoleMessage(self, level, message, lineNumber, sourceID):
         print(f"Console message ({level}): {message} (line {lineNumber})")
@@ -33,7 +32,7 @@ class HtmlViewer(QMainWindow):
         self.webpage.loadFinished.connect(self.webpage.on_load_finished)
 
         self.setCentralWidget(self.webview)
-        self.setGeometry(100, 100, 800, 600)
+        self.setGeometry(100, 100, 1200, 1000)
         self.setWindowTitle("HTML Viewer")
 
 if __name__ == "__main__":
