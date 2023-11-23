@@ -8,8 +8,9 @@ from flask import Flask, jsonify, render_template
 
 import subprocess
 
-current_dir = os.path.join(os.path.dirname(__file__), 'frontend')
+current_dir = os.path.join(os.path.dirname(__file__), 'static')
 session_file = os.path.join(current_dir, 'session.json')
+color_file = os.path.join(current_dir, 'color_picker.json')
 
 app = Flask(__name__, template_folder='static')
 
@@ -32,13 +33,30 @@ def get_semester():
     except Exception as e:
         print("Couldn't load data from session file.", str(e))
 
+@app.route('/api/get_colorPicker', methods=['GET'])
+def get_colorPicker():
+    try:
+        with open(color_file, "r", encoding='utf-8') as json_file:
+            colors_data = json.load(json_file)
+            return jsonify(colors_data)
+        
+    except Exception as e:
+        print("Couldn't load data from session file.", str(e))
+
+
 @app.route("/")
 def serve_index():
     return render_template('index.html')
 
+def run_PyQt5_app():
+    try:
+        subprocess.run(['py', 'PyQt5_app.py'], check=True)
+        return 'PyQt5 app opened successfully.'
+    except Exception as e:
+        print('Error running program', str(e))
 
-def open_browser():
-    webbrowser.open_new_tab("http://127.0.0.1:5001/")
+# def open_browser():
+#     webbrowser.open_new_tab("http://127.0.0.1:5001/")
 
 
 if __name__ == '__main__':
@@ -46,8 +64,11 @@ if __name__ == '__main__':
     # app_thread = threading.Thread(target=app.run, kwargs={'debug': True})
     # app_thread.start()
 
-    webbrowser_timer = threading.Timer(1, open_browser)
-    webbrowser_timer.start()
+    PyQt5_timer = threading.Timer(1, run_PyQt5_app)
+    PyQt5_timer.start()
+
+    # webbrowser_timer = threading.Timer(1, open_browser)
+    # webbrowser_timer.start()
 
     app.run(debug=False, port=5001)
 
