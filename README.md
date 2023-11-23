@@ -36,21 +36,42 @@ The client side is automatically launched `index.html` in a new browser tab
 ---
 
 ## The scheduling problem
+The scheduling problem involves allocating resources or tasks to specific time slots while satisfying constraints.
+The goal is to minimize completion time, resource utilization, or other relevant criteria. 
+The complexity of scheduling problems varies, with some being NP-hard, necessitating the use of approximation algorithms and heuristics in practical applications.
 
 ---
 
 ## Graph colorings and the scheduling problem
+Graph colorings and the scheduling problem are related computational challenges.
+Graph coloring involves assigning colors to vertices in a graph such that no adjacent vertices share the same color.
+This concept is applied in scheduling problems where tasks or events are assigned time slots or resources, ensuring that conflicting elements are scheduled independently.
+In the context of the scheduling problem, the graph coloring problem can be seen as a way
+to reduce the problem to a graph coloring problem.
+
 Below shows a coloring of the graph of courses
 ![alt text](https://github.com/TokamLilian/sch-problem-reduc/blob/c034f457625d22c618b884deb75711c5e6da6ee9/miscellaneous/Colored_graph_001.png)
 
 ---
 
 ## Reduction from the Scheduling Problem to Graph Coloring 
+Reduction from the scheduling problem to graph coloring involves representing tasks as vertices in a graph and creating edges between conflicting tasks
+ The scheduling constraints are translated into graph properties as follows:
+- Each course is represented by a node in the graph.
+- Each course has a set of dependencies, represented by edges between nodes.
+
+By applying graph coloring algorithms to the constructed graph, an optimal schedule can be derived, with each color representing a distinct time slot or resource allocation for tasks.
+This reduction demonstrates the interconnected nature of these computational problems.
 
 ---
 
 ## Solution Approach for Reducing the Scheduling Problem to Graph Coloring
+Hence, To reduce the scheduling problem to graph coloring, Apply graph coloring algorithms to find a feasible schedule, with each color indicating a distinct time slot or resource allocation.
+This approach leverages graph theory to address scheduling optimization.
 
 ---
 
 ## Conclusion
+In conclusion, the reduction of the scheduling problem to graph coloring provides a valuable computational framework. By transforming scheduling constraints into graph properties and applying graph coloring algorithms,
+an efficient solution for resource allocation and time optimization can be achieved.
+This approach highlights the practical utility of graph theory in addressing real-world scheduling challenges.
