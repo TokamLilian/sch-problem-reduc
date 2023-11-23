@@ -2,6 +2,7 @@ import sys
 from PyQt5.QtCore import QUrl
 from PyQt5.QtWidgets import QApplication, QMainWindow
 from PyQt5.QtWebEngineWidgets import QWebEngineView, QWebEnginePage
+from PyQt5.QtGui import QIcon
 
 class WebPage(QWebEnginePage):
     def __init__(self, parent=None):
@@ -33,7 +34,8 @@ class HtmlViewer(QMainWindow):
 
         self.setCentralWidget(self.webview)
         self.setGeometry(100, 100, 1200, 1000)
-        self.setWindowTitle("HTML Viewer")
+        self.setWindowTitle("Graph Coloring")
+        self.setWindowIcon(QIcon('static/images/image01.jpeg'))
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
