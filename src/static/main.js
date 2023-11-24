@@ -1,8 +1,12 @@
 //import semesterData from './session.json' assert {type: 'json'};
 //import colorData from './color_picker.json' assert {type: 'json'};
 
-const url = 'http://127.0.0.1:5001/api/run_program';  // URL according to your Flask app
-fetch(url)
+//const url = 'http://127.0.0.1:5001/api/run_program';  // URL according to your Flask app
+const flask_url = 'http://127.0.0.1:5001/api/';
+const run_url = 'run_program';
+const get_semester_url = 'get_semester';
+const get_color_url = 'get_colorPicker';
+fetch(flask_url + run_url)
 
 let semesterData;
 let pathCoordinates;
@@ -10,19 +14,19 @@ let colorData;
 async function fetchData(){
 
     try{
-        const response = await fetch('http://127.0.0.1:5001/api/get_semester');
+        const response = await fetch(flask_url+get_semester_url);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         semesterData = await response.json();
         pathCoordinates = calculateCircularPath(radius, Object.keys(semesterData).length-1);
         
-        const colorResponse = await fetch('http://127.0.0.1:5001/api/get_colorPicker');
+        const colorResponse = await fetch(flask_url+get_color_url);
         if (!colorResponse.ok) {
             throw new Error(`HTTP error! Status: ${colorResponse.status}`);
         }
         colorData = await colorResponse.json();
-        
+
         next();     //proceed to next block of code AFTER all data is successdully loaded
     
     }catch(error){

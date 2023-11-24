@@ -6,6 +6,9 @@ import webbrowser
 
 from flask import Flask, jsonify, render_template
 
+FLASK_ADDRESS = '127.0.0.1'  # Sever address
+FLASK_PORT = 5001            # server port
+
 import subprocess
 
 current_dir = os.path.join(os.path.dirname(__file__), 'static')
@@ -70,7 +73,7 @@ if __name__ == '__main__':
     # webbrowser_timer = threading.Timer(1, open_browser)
     # webbrowser_timer.start()
 
-    app.run(debug=False, port=5001)
+    app.run(debug=False, host=FLASK_ADDRESS, port=FLASK_PORT)
 
 ##---Execute get_semester() ---##
 ## curl http://127.0.0.1:5001/api/get_semester ##
