@@ -41,7 +41,12 @@
          "MAT 1400",
          "MAT 1600",
          "IFT 1005",
-         "IFT 1215"
+         "IFT 1215",
+         "CSE 320",
+         "ENG 401",
+         "PHI 220",
+         "EDU 401",
+         "FRE 101"
       ],
       "couleur": 3
    },
@@ -120,7 +125,10 @@
       "adjacences": [
          "IFT 2505",
          "IFT 2105",
-         "IFT 1025"
+         "IFT 1025",
+         "CSE 320",
+         "ENG 401",
+         "BIO 450"
       ],
       "couleur": 4
    },
@@ -150,9 +158,227 @@
       "heures": 4,
       "adjacences": [
          "IFT 2255",
-         "IFT 3265"
+         "IFT 3265",
+         "PHI 220",
+         "EDU 401",
+         "FRE 101"
       ],
       "couleur": 1
+   },
+   "cours14": {
+      "id": 14,
+      "nom": "MAT 202",
+      "heures": 3,
+      "adjacences": [],
+      "couleur": 0
+   },
+   "cours15": {
+      "id": 15,
+      "nom": "PHY 301",
+      "heures": 4,
+      "adjacences": [],
+      "couleur": 0
+   },
+   "cours16": {
+      "id": 16,
+      "nom": "CHM 220",
+      "heures": 3,
+      "adjacences": [],
+      "couleur": 0
+   },
+   "cours17": {
+      "id": 17,
+      "nom": "BIO 450",
+      "heures": 4,
+      "adjacences": [
+         "ART 150",
+         "HIS 401",
+         "MAT 1978",
+         "CSE 320",
+         "ENG 401",
+         "PSY 310"
+      ],
+      "couleur": 0
+   },
+   "cours18": {
+      "id": 18,
+      "nom": "CSE 320",
+      "heures": 3,
+      "adjacences": [
+         "IFT 2105",
+         "MAT 1978",
+         "ENG 401",
+         "BIO 450"
+      ],
+      "couleur": 5
+   },
+   "cours19": {
+      "id": 19,
+      "nom": "ENG 401",
+      "heures": 4,
+      "adjacences": [
+         "IFT 2105",
+         "MAT 1978",
+         "CSE 320",
+         "PSY 310",
+         "BIO 450"
+      ],
+      "couleur": 6
+   },
+   "cours20": {
+      "id": 20,
+      "nom": "PSY 310",
+      "heures": 3,
+      "adjacences": [
+         "ENG 401",
+         "BIO 450"
+      ],
+      "couleur": 7
+   },
+   "cours21": {
+      "id": 21,
+      "nom": "SOC 220",
+      "heures": 4,
+      "adjacences": [],
+      "couleur": 0
+   },
+   "cours22": {
+      "id": 22,
+      "nom": "ART 150",
+      "heures": 3,
+      "adjacences": [
+         "BIO 450",
+         "HIS 401",
+         "MUS 201",
+         "ECO 301"
+      ],
+      "couleur": 1
+   },
+   "cours23": {
+      "id": 23,
+      "nom": "MUS 201",
+      "heures": 2,
+      "adjacences": [
+         "ART 150",
+         "ECO 301",
+         "HIS 401"
+      ],
+      "couleur": 0
+   },
+   "cours24": {
+      "id": 24,
+      "nom": "ECO 301",
+      "heures": 3,
+      "adjacences": [
+         "ART 150",
+         "MUS 201",
+         "HIS 401"
+      ],
+      "couleur": 3
+   },
+   "cours25": {
+      "id": 25,
+      "nom": "HIS 401",
+      "heures": 4,
+      "adjacences": [
+         "BIO 450",
+         "ART 150",
+         "MUS 201",
+         "ECO 301",
+         "POL 320",
+         "GEO 250",
+         "ANT 202"
+      ],
+      "couleur": 2
+   },
+   "cours26": {
+      "id": 26,
+      "nom": "POL 320",
+      "heures": 3,
+      "adjacences": [
+         "GEO 250",
+         "ANT 202",
+         "LIT 310",
+         "HIS 401"
+      ],
+      "couleur": 0
+   },
+   "cours27": {
+      "id": 27,
+      "nom": "GEO 250",
+      "heures": 4,
+      "adjacences": [
+         "POL 320",
+         "ANT 202",
+         "LIT 310",
+         "HIS 401"
+      ],
+      "couleur": 3
+   },
+   "cours28": {
+      "id": 28,
+      "nom": "ANT 202",
+      "heures": 3,
+      "adjacences": [
+         "POL 320",
+         "GEO 250",
+         "LIT 310",
+         "HIS 401"
+      ],
+      "couleur": 4
+   },
+   "cours29": {
+      "id": 29,
+      "nom": "LIT 310",
+      "heures": 4,
+      "adjacences": [
+         "POL 320",
+         "GEO 250",
+         "ANT 202",
+         "PHI 220",
+         "EDU 401",
+         "FRE 101"
+      ],
+      "couleur": 5
+   },
+   "cours30": {
+      "id": 30,
+      "nom": "PHI 220",
+      "heures": 3,
+      "adjacences": [
+         "EDU 401",
+         "FRE 101",
+         "IFT 4000",
+         "IFT 2105",
+         "LIT 310"
+      ],
+      "couleur": 0
+   },
+   "cours31": {
+      "id": 31,
+      "nom": "EDU 401",
+      "heures": 4,
+      "adjacences": [
+         "PHI 220",
+         "FRE 101",
+         "IFT 4000",
+         "IFT 2105",
+         "LIT 310"
+      ],
+      "couleur": 6
+   },
+   "cours32": {
+      "id": 32,
+      "nom": "FRE 101",
+      "heures": 3,
+      "adjacences": [
+         "PHI 220",
+         "EDU 401",
+         "IFT 4000",
+         "IFT 2105",
+         "LIT 310"
+      ],
+      "couleur": 7
    },
    "periodes": 11
 }
