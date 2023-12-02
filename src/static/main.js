@@ -58,7 +58,8 @@ function calculateCircularPath(radius, numPoints) {
 fetchData();
 
 function next(){
-
+    const sortedMap = new Map(Object.entries(semesterData).sort(([, a], [, b]) => a.id - b.id));
+    
     function getId(courseName){
         let id=-1;
         for (const c in semesterData){
@@ -70,12 +71,26 @@ function next(){
         
     }
 
+    // Function to draw smal dot
+    function createDot(x,y){
+        const dot = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+        const r=2;
+        const fill='black';
+
+        dot.setAttribute("cx",x);
+        dot.setAttribute("cy",y);
+        dot.setAttribute("r",r);
+        dot.style.fill = fill;
+        
+        return dot;
+    }
+
     // Function to draw a course node
     function drawCourseNode(course, x, y) {
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute('cx', x);
         circle.setAttribute('cy', y);
-        circle.setAttribute('r', 20);
+        circle.setAttribute('r', 10);
         const colorId = course["couleur"]
         circle.setAttribute('fill', colorData[colorId]);
 
@@ -83,6 +98,7 @@ function next(){
         text.setAttribute('x', x);
         text.setAttribute('y', y + 5);
         text.setAttribute('text-anchor', 'middle');
+        text.setAttribute("font-size", "7");
         text.textContent = course.nom;
 
         circles.push([circle, text]);
@@ -97,16 +113,21 @@ function next(){
         line.setAttribute('x2', x2);
         line.setAttribute('y2', y2);
         line.setAttribute('stroke', 'gray');
-        line.setAttribute('stroke-width', 2);
+        line.setAttribute('stroke-width', 1);
 
+        const startDot = createDot(x1, y1);
+        const endDot = createDot(x2, y2);
+
+        linesContainer.appendChild(startDot);
         linesContainer.appendChild(line);
+        linesContainer.appendChild(endDot);
     }
 
     //create circles with text objects to be stored in an array
     let i = 0;
-    for (const courseId in semesterData) {
+    for (const courseId of sortedMap.keys()) {
         if (courseId.startsWith("cours")) {
-            const course = semesterData[courseId];
+            const course = sortedMap.get(courseId);
             let x = pathCoordinates[i].x; let y = pathCoordinates[i].y;
             drawCourseNode(course, x+radius, y+radius);
 
@@ -123,9 +144,9 @@ function next(){
 
     // Draw arcs for dependencies
     let j = 0;
-    for (const courseId in semesterData) {
+    for (const courseId of sortedMap.keys()) {
         if (courseId.startsWith("cours")) {
-            const course = semesterData[courseId];
+            const course = sortedMap.get(courseId);
             course.adjacences.forEach(dependency => {
                 const id = getId(dependency);
                 drawArc(circles[course["id"]][0].getAttribute('cx'), circles[course["id"]][0].getAttribute('cy'), circles[id][0].getAttribute('cx'), circles[id][0].getAttribute('cy'));
