@@ -7,7 +7,7 @@ from Cour import *
 from coloriage import *
 
 class main:
-    
+   
     def __init__(self):
         self.Year = {}
         self.files_dir = os.path.join(os.path.dirname(__file__), 'files')
@@ -32,11 +32,11 @@ class main:
                 courX = session.get_cours_by_name(cour)
 
                 if courX != None: cours_tab.append(courX)
-            
+           
             return cours_tab
 
         return {f'{etudiant}':Etudiant(obj[etudiant]["userName"], obj[etudiant]["matricule"], tab_cours(obj[etudiant]["coursInscrits"])) for etudiant in obj }
-    
+   
 
     def creer_cours(self, obj):
         """
@@ -44,7 +44,7 @@ class main:
         """
         taille = len(obj)
         return {f'{cours}':Cour(obj[cours]["nom"], obj[cours]["heures"]) for cours in obj }
-    
+   
 
     def set_adjacences(self, session):
         """
@@ -57,9 +57,9 @@ class main:
             cours = student.get_cours()
 
             #ajouter chaque cours dans "cours" parmi les adjacences des cours dans "cours"
-            for course in cours:           
+            for course in cours:          
 
-                for course_next in cours:           
+                for course_next in cours:          
 
                     if course != course_next:
 
@@ -76,26 +76,26 @@ class main:
         try:
            with open(self.cours_file, "r", encoding='utf-8') as courses_file:
                 Cours = json.load(courses_file) 
-                session.set_cours(i.creer_cours(Cours))
+                session.set_cours(self.creer_cours(Cours))
         except Exception as e:
             print(e)
 
         try:
            with open(self.students_file, "r", encoding='utf-8') as students_file:
                Etudiants = json.load(students_file) 
-               session.set_etudiants(i.creer_etudiants(session, Etudiants))
+               session.set_etudiants(self.creer_etudiants(session, Etudiants))
         except Exception as e:
 
             print(e)
 
         self.set_adjacences(session)
-    
+   
 
 if __name__ == "__main__":
     i = main()
 
-    nom = "Automne 2023"                                             ##le nom de la session doit etre au debut du fichie lu ou le nom du fichier
-    periodes = 11                                                    ##le nombre de periodes dans une journee
+    nom = "Automne 2023"                                             # le nom de la session
+    periodes = 11                                                    # le nombre de periodes dans une journee
 
     session = Session(nom)
     session.set_periodes(periodes)
