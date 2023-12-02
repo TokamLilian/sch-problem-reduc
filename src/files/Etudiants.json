@@ -56,5 +56,237 @@
              "IFT 2105"
         ]
 
+    },
+
+    "Etudiant5": {
+        "userName": "uio234",
+        "matricule": "789012",
+        "coursInscrits": ["IFT 2105", "MAT 1978", "CSE 320", "ENG 401"]
+    },
+    "Etudiant6": {
+        "userName": "jkl567",
+        "matricule": "890123",
+        "coursInscrits": ["BIO 450", "SOC 210", "ART 150", "HIS 401"]
+    },
+    "Etudiant7": {
+        "userName": "vbn890",
+        "matricule": "901234",
+        "coursInscrits": ["POL 320", "GEO 250", "ANT 202", "LIT 310"]
+    },
+    "Etudiant8": {
+        "userName": "mnb123",
+        "matricule": "123456",
+        "coursInscrits": ["PHI 220", "EDU 401", "FRE 101", "IFT 4000"]
+    },
+    "Etudiant9": {
+        "userName": "poi456",
+        "matricule": "234567",
+        "coursInscrits": ["MAT 101", "PHY 202", "CHM 305", "BIO 450"]
+    },
+    "Etudiant10": {
+        "userName": "zxc789",
+        "matricule": "345678",
+        "coursInscrits": ["CSE 220", "ENG 401", "PSY 310", "SOC 210"]
+    },
+    "Etudiant11": {
+        "userName": "lkj234",
+        "matricule": "456789",
+        "coursInscrits": ["ART 150", "MUS 201", "ECO 301", "HIS 401"]
+    },
+    "Etudiant12": {
+        "userName": "qwe567",
+        "matricule": "567890",
+        "coursInscrits": ["POL 320", "GEO 250", "ANT 202", "LIT 310"]
+    },
+    "Etudiant13": {
+        "userName": "mnb890",
+        "matricule": "678901",
+        "coursInscrits": ["PHI 220", "EDU 401", "FRE 101", "IFT 2105"]
+    },
+    "Etudiant14": {
+        "userName": "poi123",
+        "matricule": "789012",
+        "coursInscrits": ["MAT 1978", "CSE 320", "ENG 401", "BIO 450"]
+    },
+
+    "Etudiant15": {
+        "userName": "zxc456",
+        "matricule": "890123",
+        "coursInscrits": ["SOC 210", "ART 150", "MUS 201", "ECO 301"]
+    },
+    "Etudiant16": {
+        "userName": "lkj789",
+        "matricule": "901234",
+        "coursInscrits": ["HIS 401", "POL 320", "GEO 250", "ANT 202"]
+    },
+    "Etudiant17": {
+        "userName": "qwe234",
+        "matricule": "123456",
+        "coursInscrits": ["LIT 310", "PHI 220", "EDU 401", "FRE 101"]
+    },
+    "Etudiant18": {
+        "userName": "mnb567",
+        "matricule": "234567",
+        "coursInscrits": ["IFT 4000", "MAT 101", "PHY 202", "CHM 305"]
+    },
+    "Etudiant19": {
+        "userName": "poi890",
+        "matricule": "345678",
+        "coursInscrits": ["BIO 450", "CSE 220", "ENG 401", "PSY 310"]
+    },
+    "Etudiant20": {
+        "userName": "zxc123",
+        "matricule": "456789",
+        "coursInscrits": ["SOC 210", "ART 150", "MUS 201", "ECO 301"]
+    },
+    "Etudiant21": {
+        "userName": "lkj456",
+        "matricule": "567890",
+        "coursInscrits": ["HIS 401", "POL 320", "GEO 250", "ANT 202"]
+    },
+    "Etudiant22": {
+        "userName": "qwe789",
+        "matricule": "678901",
+        "coursInscrits": ["LIT 310", "PHI 220", "EDU 401", "FRE 101"]
+    },
+    "Etudiant23": {
+        "userName": "mnb234",
+        "matricule": "789012",
+        "coursInscrits": ["IFT 2105", "MAT 1978", "CSE 320", "ENG 401"]
+    },
+    "Etudiant24": {
+        "userName": "poi567",
+        "matricule": "890123",
+        "coursInscrits": ["BIO 450", "SOC 210", "ART 150", "HIS 401"]
+    },
+    "Etudiant25": {
+        "userName": "zxc890",
+        "matricule": "901234",
+        "coursInscrits": ["POL 320", "GEO 250", "ANT 202", "LIT 310"]
+    },
+    "Etudiant26": {
+        "userName": "lkj123",
+        "matricule": "123456",
+        "coursInscrits": ["PHI 220", "EDU 401", "FRE 101", "IFT 4000"]
+    },
+    "Etudiant27": {
+        "userName": "qwe456",
+        "matricule": "234567",
+        "coursInscrits": ["MAT 101", "PHY 202", "CHM 305", "BIO 450"]
+    },
+    "Etudiant28": {
+        "userName": "mnb789",
+        "matricule": "345678",
+        "coursInscrits": ["CSE 220", "ENG 401", "PSY 310", "SOC 210"]
+    },
+    "Etudiant29": {
+        "userName": "poi234",
+        "matricule": "456789",
+        "coursInscrits": ["ART 150", "MUS 201", "ECO 301", "HIS 401"]
+    },
+    "Etudiant30": {
+        "userName": "zxc567",
+        "matricule": "567890",
+        "coursInscrits": ["POL 320", "GEO 250", "ANT 202", "LIT 310"]
+    },
+    "Etudiant31": {
+        "userName": "lkj890",
+        "matricule": "678901",
+        "coursInscrits": ["PHI 220", "EDU 401", "FRE 101", "IFT 2105"]
+    },
+    "Etudiant32": {
+        "userName": "qwe123",
+        "matricule": "789012",
+        "coursInscrits": ["MAT 1978", "CSE 320", "ENG 401", "BIO 450"]
+    },
+    "Etudiant33": {
+        "userName": "mnb456",
+        "matricule": "890123",
+        "coursInscrits": ["SOC 210", "ART 150", "MUS 201", "ECO 301"]
+    },
+    "Etudiant34": {
+        "userName": "poi789",
+        "matricule": "901234",
+        "coursInscrits": ["HIS 401", "POL 320", "GEO 250", "ANT 202"]
+    },
+    "Etudiant35": {
+        "userName": "zxc234",
+        "matricule": "123456",
+        "coursInscrits": ["LIT 310", "PHI 220", "EDU 401", "FRE 101"]
+    },
+    "Etudiant36": {
+        "userName": "lkj567",
+        "matricule": "234567",
+        "coursInscrits": ["IFT 4000", "MAT 101", "PHY 202", "CHM 305"]
+    },
+    "Etudiant37": {
+        "userName": "qwe890",
+        "matricule": "345678",
+        "coursInscrits": ["BIO 450", "CSE 220", "ENG 401", "PSY 310"]
+    },
+    "Etudiant38": {
+        "userName": "mnb123",
+        "matricule": "456789",
+        "coursInscrits": ["SOC 210", "ART 150", "MUS 201", "ECO 301"]
+    },
+    "Etudiant39": {
+        "userName": "poi456",
+        "matricule": "567890",
+        "coursInscrits": ["HIS 401", "POL 320", "GEO 250", "ANT 202"]
+    },
+    "Etudiant40": {
+        "userName": "zxc789",
+        "matricule": "678901",
+        "coursInscrits": ["LIT 310", "PHI 220", "EDU 401", "FRE 101"]
+    },
+    "Etudiant41": {
+        "userName": "lkj234",
+        "matricule": "789012",
+        "coursInscrits": ["IFT 2105", "MAT 1978", "CSE 320", "ENG 401"]
+    },
+    "Etudiant42": {
+        "userName": "qwe567",
+        "matricule": "890123",
+        "coursInscrits": ["BIO 450", "SOC 210", "ART 150", "HIS 401"]
+    },
+    "Etudiant43": {
+        "userName": "mnb890",
+        "matricule": "901234",
+        "coursInscrits": ["POL 320", "GEO 250", "ANT 202", "LIT 310"]
+    },
+    "Etudiant44": {
+        "userName": "poi123",
+        "matricule": "123456",
+        "coursInscrits": ["PHI 220", "EDU 401", "FRE 101", "IFT 4000"]
+    },
+    "Etudiant45": {
+        "userName": "zxc456",
+        "matricule": "234567",
+        "coursInscrits": ["MAT 101", "PHY 202", "CHM 305", "BIO 450"]
+    },
+    "Etudiant46": {
+        "userName": "lkj789",
+        "matricule": "345678",
+        "coursInscrits": ["CSE 220", "ENG 401", "PSY 310", "SOC 210"]
+    },
+    "Etudiant47": {
+        "userName": "qwe234",
+        "matricule": "456789",
+        "coursInscrits": ["ART 150", "MUS 201", "ECO 301", "HIS 401"]
+    },
+    "Etudiant48": {
+        "userName": "mnb567",
+        "matricule": "567890",
+        "coursInscrits": ["POL 320", "GEO 250", "ANT 202", "LIT 310"]
+    },
+    "Etudiant49": {
+        "userName": "poi890",
+        "matricule": "678901",
+        "coursInscrits": ["PHI 220", "EDU 401", "FRE 101", "IFT 2105"]
+    },
+    "Etudiant50": {
+        "userName": "zxc123",
+        "matricule": "789012",
+        "coursInscrits": ["MAT 1978", "CSE 320", "ENG 401"]
     }
 }
