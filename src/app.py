@@ -31,7 +31,7 @@ def get_semester():
     try:
         with open(session_file, "r", encoding='utf-8') as json_file:
             semester_data = json.load(json_file)
-            return jsonify(semester_data)
+            return semester_data
         
     except Exception as e:
         print("Couldn't load data from session file.", str(e))
