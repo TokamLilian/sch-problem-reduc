@@ -67,5 +67,101 @@
     "cours13":{
         "nom": "IFT 4000",
         "heures": 4
-    }
+    },
+
+    "cours14": {
+        "nom": "MAT 202",
+        "heures": 3
+    },
+
+    "cours15": {
+        "nom": "PHY 301",
+        "heures": 4
+    },
+
+    "cours16": {
+        "nom": "CHM 220",
+        "heures": 3
+    },
+
+        "cours17": {
+        "nom": "BIO 450",
+        "heures": 4
+        },
+
+        "cours18": {
+        "nom": "CSE 320",
+        "heures": 3
+        },
+
+        "cours19": {
+        "nom": "ENG 401",
+        "heures": 4
+        },
+
+        "cours20": {
+        "nom": "PSY 310",
+        "heures": 3
+        },
+
+        "cours21": {
+        "nom": "SOC 220",
+        "heures": 4
+        },
+
+        "cours22": {
+        "nom": "ART 150",
+        "heures": 3
+        },
+
+        "cours23": {
+        "nom": "MUS 201",
+        "heures": 2
+        },
+
+        "cours24": {
+        "nom": "ECO 301",
+        "heures": 3
+        },
+
+        "cours25": {
+        "nom": "HIS 401",
+        "heures": 4
+        },
+
+        "cours26": {
+        "nom": "POL 320",
+        "heures": 3
+        },
+
+        "cours27": {
+        "nom": "GEO 250",
+        "heures": 4
+        },
+
+        "cours28": {
+        "nom": "ANT 202",
+        "heures": 3
+        },
+
+        "cours29": {
+        "nom": "LIT 310",
+        "heures": 4
+        },
+
+        "cours30": {
+        "nom": "PHI 220",
+        "heures": 3
+        },
+
+        "cours31": {
+        "nom": "EDU 401",
+        "heures": 4
+        },
+
+        "cours32": {
+        "nom": "FRE 101",
+        "heures": 3
+        }
+
 }
