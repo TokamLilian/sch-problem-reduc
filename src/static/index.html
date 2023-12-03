@@ -8,10 +8,6 @@
         <title>Graph des cours</title>
 
         <style>
-            /* svg {
-                width: 100%;
-                height: auto;
-            } */
 
             svg {
                 display: flex;
@@ -20,6 +16,18 @@
                 height: 100vh; /* Set the height to the full viewport height */
                 margin: 0; /* Remove default margin */
             }
+
+            .popup {
+                position: absolute;
+                display: none;
+                padding: 10px;
+                background-color: #ffffff;
+                border: 1px solid #cccccc;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 1;
+            }
+
         </style>
     </head>
 
